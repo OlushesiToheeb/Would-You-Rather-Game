@@ -1,23 +1,45 @@
-import '../styles/App.css';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import Dashboard from './Dashboard';
+import { handleInitialData } from '../actions/shared';
 
-function App() {
-    return (
-        <div className='App'>
-            <header className='App-header'>
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className='App-link'
-                    href='https://reactjs.org'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                >
-                    Learn React
-                </a>
-            </header>
-        </div>
-    );
+class App extends Component {
+    componentDidMount() {
+        const { dispatch } = this.props;
+        dispatch(handleInitialData());
+    }
+
+    render() {
+        const { authedUser } = this.props;
+        return (
+            <Router>
+                <>
+                    {authedUser === null || authedUser === undefined ? (
+                        <p>Login</p>
+                    ) : (
+                        <div className='container'>
+                            <p>nav</p>
+                            <div className='app-body'>
+                                <Route path='/' exact component={Dashboard} />
+                                <Route
+                                    path='/tweet/:id'
+                                    // component={TweetPage}
+                                />
+                                <Route path='/new' />
+                            </div>
+                        </div>
+                    )}
+                </>
+            </Router>
+        );
+    }
 }
 
-export default App;
+function mapStateToProps({ authedUser }) {
+    return {
+        authedUser,
+    };
+}
+
+export default connect(mapStateToProps)(App);
