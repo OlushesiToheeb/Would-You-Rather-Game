@@ -1,0 +1,23 @@
+.login_form {
+    width: 500px;
+    margin: 100px auto;
+    border: 1 solid #dbdbdb;
+
+    h2 {
+        background-color: #f5f7f9;
+        color: 212529;
+        padding: 10px;
+        text-align: center;
+    }
+
+    & .login {
+        margin: 10px;
+        text-align: center;
+
+        span {
+            font-size: 16px;
+            font-weight: 600;
+            color: #212529;
+        }
+    }
+}
