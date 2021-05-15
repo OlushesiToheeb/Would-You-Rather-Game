@@ -5,6 +5,7 @@ import Dashboard from './Dashboard';
 import { handleInitialData } from '../actions/shared';
 import Login from './Login';
 import Nav from './Nav';
+import PollQuestion from './PollQuestion';
 import '../styles/App.css';
 
 class App extends Component {
@@ -31,8 +32,8 @@ class App extends Component {
                                         component={Dashboard}
                                     />
                                     <Route
-                                        path='/tweet/:id'
-                                        // component={TweetPage}
+                                        path='/questions/:question_id'
+                                        component={PollQuestion}
                                     />
                                     <Route path='/new' />
                                 </Switch>

@@ -12,11 +12,12 @@ const panes = ({ userQuestionData, users }) => [
         menuItem: 'Unanswered Questions',
         render: () => (
             <Tab.Pane attached={false}>
-                {userQuestionData.unansweredQuestions.map((question) => (
+                {userQuestionData?.unansweredQuestions.map((question) => (
                     <PollTeaser
                         key={question.id}
                         question={question}
                         users={users}
+                        unAnswered
                     />
                 ))}
             </Tab.Pane>
@@ -26,7 +27,7 @@ const panes = ({ userQuestionData, users }) => [
         menuItem: 'Answered Questions',
         render: () => (
             <Tab.Pane attached={false}>
-                {userQuestionData.answeredQuestions.map((question) => (
+                {userQuestionData?.answeredQuestions.map((question) => (
                     <PollTeaser
                         key={question.id}
                         question={question}

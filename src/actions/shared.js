@@ -1,5 +1,9 @@
-import { receiveUsers } from './users';
-import { receiveQuestions } from './questions';
+import { receiveUsers, addAnswerToUser, addQuestionToUser } from './users';
+import {
+    receiveQuestions,
+    addQuestion,
+    addAnswerToQuestion,
+} from './questions';
 import {
     getUsers,
     getQuestions,
@@ -29,6 +33,28 @@ export function handleInitialData() {
         return getInitialData().then(({ users, questions }) => {
             dispatch(receiveUsers(users));
             dispatch(receiveQuestions(questions));
+        });
+    };
+}
+
+export function handleSaveQuestion(optionOneText, optionTwoText, author) {
+    return (dispatch) => {
+        return saveQuestion({ optionOneText, optionTwoText, author }).then(
+            (question) => {
+                dispatch(addQuestion(question));
+                dispatch(addQuestionToUser(question));
+            }
+        );
+    };
+}
+
+export function handleSaveQuestionAnswer(authedUser, qid, answer) {
+    return (dispatch) => {
+        dispatch(addAnswerToUser(authedUser, qid, answer));
+        dispatch(addAnswerToQuestion(authedUser, qid, answer));
+
+        return saveQuestionAnswer({ authedUser, qid, answer }).catch((e) => {
+            console.warn('Error in handleSaveQuestionAnswer:', e);
         });
     };
 }
