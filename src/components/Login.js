@@ -15,6 +15,7 @@ const Login = ({ dispatch, userDetails }) => {
     const handleSetUser = (e, { value }) => setUser(value);
 
     const handleSetAuthedUser = () => {
+        localStorage.setItem('authedUser', user);
         dispatch(setAuthedUser(user));
     };
 

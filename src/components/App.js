@@ -5,6 +5,7 @@ import Dashboard from './Dashboard';
 import { handleInitialData } from '../actions/shared';
 import Login from './Login';
 import Nav from './Nav';
+import '../styles/App.css';
 
 class App extends Component {
     componentDidMount() {

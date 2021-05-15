@@ -35,13 +35,13 @@ const Nav = ({ dispatch, location, user }) => {
                 <Menu.Menu position='right'>
                     <span style={{ display: 'flex', alignItems: 'center' }}>
                         <span style={{ marginRight: '10px' }}>
-                            Hi {user.name}
+                            Hi {user?.name}
                         </span>
                         <Image
-                            src={user.avatarURL}
+                            src={user?.avatarURL}
                             avatar
                             circular={true}
-                            alt={user.name}
+                            alt={user?.name}
                             verticalAlign={'bottom'}
                             className={'nav-avatar'}
                         />
