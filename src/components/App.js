@@ -7,6 +7,7 @@ import Login from './Login';
 import Nav from './Nav';
 import PollQuestion from './PollQuestion';
 import PollResult from './PollResult';
+import NewPoll from './NewPoll';
 import '../styles/App.css';
 
 class App extends Component {
@@ -40,7 +41,7 @@ class App extends Component {
                                         path='/results/:question_id'
                                         component={PollResult}
                                     />
-                                    <Route path='/new' />
+                                    <Route path='/new' component={NewPoll} />
                                 </Switch>
                             </div>
                         </div>

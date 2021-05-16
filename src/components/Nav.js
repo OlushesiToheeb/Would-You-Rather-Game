@@ -22,9 +22,9 @@ const Nav = ({ dispatch, location, user }) => {
                 />
                 <Menu.Item
                     as={Link}
-                    to='/new-poll'
+                    to='/new'
                     name='new poll'
-                    active={pathname === '/new-poll'}
+                    active={pathname === '/new'}
                 />
                 <Menu.Item
                     as={Link}

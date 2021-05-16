@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Button } from 'semantic-ui-react';
 import { Redirect, withRouter } from 'react-router-dom';
 import ResultUI from './ResultUI';
-import '../styles/Teaser.scss';
+import '../styles/Polls.scss';
 
 const PollResult = ({
     user: { name, avatarURL },
