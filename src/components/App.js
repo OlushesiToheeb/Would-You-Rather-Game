@@ -8,6 +8,8 @@ import Nav from './Nav';
 import PollQuestion from './PollQuestion';
 import PollResult from './PollResult';
 import NewPoll from './NewPoll';
+import LeaderBoard from './LeaderBoard';
+import NotFound from './NotFound';
 import '../styles/App.css';
 
 class App extends Component {
@@ -41,7 +43,16 @@ class App extends Component {
                                         path='/results/:question_id'
                                         component={PollResult}
                                     />
-                                    <Route path='/new' component={NewPoll} />
+                                    <Route path='/add' component={NewPoll} />
+                                    <Route
+                                        path='/leaderboard'
+                                        component={LeaderBoard}
+                                    />
+                                    <Route
+                                        path='/404-Page'
+                                        component={NotFound}
+                                    />
+                                    <Route component={NotFound} />
                                 </Switch>
                             </div>
                         </div>
