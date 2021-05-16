@@ -6,6 +6,7 @@ import { handleInitialData } from '../actions/shared';
 import Login from './Login';
 import Nav from './Nav';
 import PollQuestion from './PollQuestion';
+import PollResult from './PollResult';
 import '../styles/App.css';
 
 class App extends Component {
@@ -34,6 +35,10 @@ class App extends Component {
                                     <Route
                                         path='/questions/:question_id'
                                         component={PollQuestion}
+                                    />
+                                    <Route
+                                        path='/results/:question_id'
+                                        component={PollResult}
                                     />
                                     <Route path='/new' />
                                 </Switch>
