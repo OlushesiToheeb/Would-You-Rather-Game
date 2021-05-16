@@ -14,7 +14,7 @@ const LeaderBoard = ({ leaderboardInfo }) => {
         <>
             <div className='teaser-body'>
                 <div className='teaser-header-div'>
-                    <h3 className='teaser-header'>LeaderBoard</h3>
+                    <h2 className='teaser-header'>LeaderBoard</h2>
                 </div>
 
                 {leaderboardInfo.map((user, index) => (

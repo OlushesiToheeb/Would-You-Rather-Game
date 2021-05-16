@@ -22,7 +22,7 @@ const Login = ({ dispatch, userDetails }) => {
     return (
         <form className='login_form' onSubmit={handleSetAuthedUser}>
             <>
-                <h2>Would you rather</h2>
+                <h2>Would you rather App</h2>
                 <div className='login'>
                     <span>Login to play</span>
                     <Dropdown

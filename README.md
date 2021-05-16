@@ -1,6 +1,6 @@
 # Udacity: Would You Rather Game
 
-A web app that let's user play the "Would You Rather?" game, built with React and Redux, boostrap with [create-react-app(https://reactjs.org/docs/create-a-new-react-app.html) and the purpose of this project is to demonstrate ability to effectively use Redux for state management in React applications.
+A web app that let's user play the "Would You Rather?" game, built with React and Redux, boostrap with [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) and the purpose of this project is to demonstrate ability to effectively use Redux for state management in React applications.
 
 ## Project Description
 
@@ -22,6 +22,6 @@ The game goes like this: A user is asked a question in the form: “Would you ra
 
 ## Screen Shots
 
-<img src="/ScreenShots/ScreenShot1.png" height="49%" width="49%"> <img src="/ScreenShots/ScreenShot2.png" height="49%" width="49%">
+<img src="/screenshots/screen1.png" height="49%" width="49%"> <img src="/screenshots/screen2.png" height="49%" width="49%">
 
-<img src="/ScreenShots/ScreenShot3.png" height="49%" width="49%"> <img src="/ScreenShots/ScreenShot4.png" height="49%" width="49%">
+<img src="/screenshots/screen3.png" height="49%" width="49%"> <img src="/screenshots/screen4.png" height="49%" width="49%">
