@@ -10,7 +10,7 @@ const Login = ({ dispatch, userDetails }) => {
 
     useEffect(() => {
         dispatch(getAllUsers());
-    }, []);
+    }, [dispatch]);
 
     const handleSetUser = (e, { value }) => setUser(value);
 
